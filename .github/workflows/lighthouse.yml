@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: ./lighthouse
-        run: cd lighthouse && yarn --ignore-engines --ignore-scripts
+        run: yarn --ignore-engines --ignore-scripts
 
       - name: Run Lighthouse
         working-directory: ./lighthouse
