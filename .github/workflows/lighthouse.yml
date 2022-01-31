@@ -25,12 +25,12 @@ jobs:
       - name: Run Lighthouse
         working-directory: ./lighthouse
         run: |
-          echo -e "*Weekly audit against Sourcegraph.com*\n" > lighthouse_results.txt
           ./report.sh ":house: *Homepage*" "https://sourcegraph.com/search" ./reports/homepage.json
 
-      - name: Update repository
+      - name: Commit results
         run: |
           git config --global user.name 'Sourcegraph Bot'
           git config --global user.email 'bot@sourcegraph.com'
-          git status
-
+          git add .
+          git commit -am "Lighthouse results"
+          git push
