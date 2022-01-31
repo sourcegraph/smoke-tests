@@ -1,0 +1,29 @@
+name: Lighthouse production audit
+on: push
+  # workflow_dispatch:
+  # schedule:
+  #   # Everyday at 12pm UTC
+  #   - cron: "0 12 * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # set up correct version of node
+      - id: nvmrc
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - uses: actions/setup-node@v2
+        with: { node-version: "${{ steps.nvmrc.outputs.NODE_VERSION }}" }
+
+      - name: Install dependencies
+        run: yarn --ignore-engines --ignore-scripts
+
+      - name: Run Lighthouse
+        run: |
+          echo -e "*Weekly audit against Sourcegraph.com*\n" > lighthouse_results.txt
+          ./lighthouse/report.sh ":house: *Homepage*" "https://sourcegraph.com/search" ./reports/homepage.json
+          ./lighthouse/report.sh ":mag_right: *Search results*" "https://sourcegraph.com/search?q=repo:sourcegraph/lighthouse-ci-test-repository+file:index.js" ./reports/search.json
+          ./lighthouse/report.sh ":repository: *Repository page*" "https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository" ./reports/repository.json
+          ./lighthouse/report.sh ":code: *File blob*" "https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository/-/blob/index.js" ./reports/file_blob.json
