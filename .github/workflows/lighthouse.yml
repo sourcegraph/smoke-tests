@@ -18,12 +18,14 @@ jobs:
         with: { node-version: "${{ steps.nvmrc.outputs.NODE_VERSION }}" }
 
       - name: Install dependencies
+        working-directory: ./lighthouse
         run: cd lighthouse && yarn --ignore-engines --ignore-scripts
 
       - name: Run Lighthouse
+        working-directory: ./lighthouse
         run: |
           echo -e "*Weekly audit against Sourcegraph.com*\n" > lighthouse_results.txt
-          ./lighthouse/report.sh ":house: *Homepage*" "https://sourcegraph.com/search" ./reports/homepage.json
-          ./lighthouse/report.sh ":mag_right: *Search results*" "https://sourcegraph.com/search?q=repo:sourcegraph/lighthouse-ci-test-repository+file:index.js" ./reports/search.json
-          ./lighthouse/report.sh ":repository: *Repository page*" "https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository" ./reports/repository.json
-          ./lighthouse/report.sh ":code: *File blob*" "https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository/-/blob/index.js" ./reports/file_blob.json
+          ./report.sh ":house: *Homepage*" "https://sourcegraph.com/search" ./reports/homepage.json
+          ./report.sh ":mag_right: *Search results*" "https://sourcegraph.com/search?q=repo:sourcegraph/lighthouse-ci-test-repository+file:index.js" ./reports/search.json
+          ./report.sh ":repository: *Repository page*" "https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository" ./reports/repository.json
+          ./report.sh ":code: *File blob*" "https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository/-/blob/index.js" ./reports/file_blob.json
