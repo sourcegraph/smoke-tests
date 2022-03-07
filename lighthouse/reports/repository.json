@@ -1,8 +1,8 @@
 {
-  "performance": "0.75",
-  "accessibility": "0.95",
+  "performance": "0.7",
+  "accessibility": "0.93",
   "best-practices": "1",
   "seo": "1",
   "report_name": ":repository: *Repository page*",
-  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1646626239243-66296.report.html"
+  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1646629913797-92323.report.html"
 }
