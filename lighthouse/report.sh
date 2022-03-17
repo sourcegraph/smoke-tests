@@ -7,8 +7,8 @@
 NAME=$1
 # URL to run Lighthouse against
 URL=$2
-# File to output results to
-OUTPUT_FILE=$3
+# Folder to output results to
+OUTPUT_FOLDER=$3
 
 yarn lhci collect --url="$URL"
 
@@ -16,10 +16,10 @@ yarn lhci collect --url="$URL"
 REPORT_URL=$(yarn lhci upload --target=temporary-public-storage | grep -o "https:\/\/storage.googleapis.*.html\+")
 
 # Primary result source, we'll use this to extract the raw audit data.
-yarn lhci upload --target=filesystem --outputDir=./reports/metadata
+yarn lhci upload --target=filesystem --outputDir="$OUTPUT_FOLDER/reports/metadata"
 
-# # Lighthouse runs multiple times and takes the median to account for varying network latency
-REPRESENTATIVE_RUN=$(jq -r '.[] | select(.isRepresentativeRun==true)' ./reports/metadata/manifest.json)
+# Lighthouse runs multiple times and takes the median to account for varying network latency
+REPRESENTATIVE_RUN=$(jq -r '.[] | select(.isRepresentativeRun==true)' "$OUTPUT_FOLDER/reports/metadata/manifest.json")
 
 # Extract the Lighthouse score for each relevant category
 PERFORMANCE=$(jq -r '.summary.performance' <<<"$REPRESENTATIVE_RUN")
@@ -27,7 +27,7 @@ ACCESSIBILITY=$(jq -r '.summary.accessibility' <<<"$REPRESENTATIVE_RUN")
 BEST_PRACTICES=$(jq -r '.summary."best-practices"' <<<"$REPRESENTATIVE_RUN")
 SEO=$(jq -r '.summary.seo' <<<"$REPRESENTATIVE_RUN")
 
-SUMMARY=$(jq -n \
+REPORT=$(jq -n \
     --arg performance "$PERFORMANCE" \
     --arg accessibility "$ACCESSIBILITY" \
     --arg best_practices "$BEST_PRACTICES" \
@@ -36,4 +36,9 @@ SUMMARY=$(jq -n \
     --arg report_name "$NAME" \
     '{performance: $performance, accessibility: $accessibility, "best-practices": $best_practices, seo: $seo, report_name: $report_name, report_url: $report_url}')
 
-echo -e "$SUMMARY" >"$OUTPUT_FILE"
+# File report for later usage in weekly summary
+# echo -e "$REPORT" >"$OUTPUT_FOLDER/reports/$(date +%FT%H).json"
+echo -e "$REPORT" >"$OUTPUT_FOLDER/reports/2022-01-31T17.json"
+
+# Update report for code insight monitoring
+echo -e "$REPORT" >"$OUTPUT_FOLDER/latest_report.json"

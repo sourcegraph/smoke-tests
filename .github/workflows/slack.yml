@@ -1,0 +1,41 @@
+name: Lighthouse production audit
+on:
+  workflow_dispatch:
+  schedule:
+    # Every Monday at 12pm UTC
+    - cron: "0 12 * * MON"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # set up correct version of node
+      - id: nvmrc
+        run: echo ::set-output name=NODE_VERSION::$(cat .nvmrc)
+      - uses: actions/setup-node@v2
+        with: { node-version: "${{ steps.nvmrc.outputs.NODE_VERSION }}" }
+
+      - name: Install dependencies
+        working-directory: ./lighthouse
+        run: yarn --ignore-engines --ignore-scripts
+
+      # Note - replace -ls with -delete
+      # - name: Remove any reports older than 7 days
+      #   run: find ./lighthouse/*/reports/*.json -mtime +7 -name '*.gz' -ls
+
+      - name: Generate Slack report
+        working-directory: ./lighthouse
+        run: |
+          echo -e "*Weekly audit against Sourcegraph.com*\n" > slack_report.txt
+          ./slack.sh ./reports/homepage.json ./slack_report.txt
+          ./slack.sh ./reports/search.json ./slack_report.txt
+          ./slack.sh ./reports/repository.json ./slack_report.txt
+          ./slack.sh ./reports/file_blob.json ./slack_report.txt
+
+      - name: Post Slack report
+        working-directory: ./lighthouse
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data "{'text':'$(cat ./lighthouse_results.txt)'}" ${{ secrets.LIGHTHOUSE_SLACK_WEBHOOK }}
+
