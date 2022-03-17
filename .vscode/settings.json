@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "eslint.validate": ["javascript"],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+    },
+    "eslint.packageManager": "yarn",
+    "eslint.codeActionsOnSave.mode": "problems",
+    "eslint.options": { "cache": true },
+}

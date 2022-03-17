@@ -1,19 +1,20 @@
 {
-  "name": "smoke-tests",
+  "name": "@sourcegraph/smoke-tests",
   "version": "1.0.0",
   "description": "Smoke tests against Sourcegraph applications",
   "private": true,
-  "workspaces": ["packages/*"],
-  "dependencies": {},
-  "devDependencies": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@sourcegraph/eslint-config": "^0.27.0",
+    "@sourcegraph/prettierrc": "^3.0.3",
+    "eslint": "^7.32.0",
+    "prettier": "^2.6.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sourcegraph/smoke-tests.git"
   },
-  "author": "",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/sourcegraph/smoke-tests/issues"
-  },
-  "homepage": "https://github.com/sourcegraph/smoke-tests#readme"
+  "license": "Apache-2.0"
 }

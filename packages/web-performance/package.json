@@ -1,5 +1,5 @@
 {
-  "name": "web-performance",
+  "name": "@sourcegraph/web-smoke-performance",
   "description": "Performance monitoring for Sourcegraph applications",
   "version": "1.0.0",
   "private": true,
