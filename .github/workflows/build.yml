@@ -1,0 +1,36 @@
+name: build
+
+on: [push, pull_request]
+
+env:
+  FORCE_COLOR: 3
+
+defaults:
+  run:
+    working-directory: packages/web-functionality
+
+jobs:
+  build-web-functionality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # set up correct version of node
+      - id: nvmrc
+        run: echo ::set-output name=NODE_VERSION::$(cat ../../.nvmrc)
+      - uses: actions/setup-node@v2
+        with: { node-version: '${{ steps.nvmrc.outputs.NODE_VERSION }}' }
+
+      - run: yarn
+
+      # checks
+      - run: yarn run prettier-check
+      - run: yarn run eslint
+
+      # publish
+      - name: release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn run semantic-release

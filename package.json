@@ -10,7 +10,21 @@
     "@sourcegraph/eslint-config": "^0.27.0",
     "@sourcegraph/prettierrc": "^3.0.3",
     "eslint": "^7.32.0",
-    "prettier": "^2.6.0"
+    "prettier": "^2.6.0",
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "husky": "^4.3.5",
+    "semantic-release": "^17.1.2"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
   },
   "repository": {
     "type": "git",

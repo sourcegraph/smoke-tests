@@ -1,13 +1,15 @@
 {
   "name": "@sourcegraph/web-smoke-tests",
   "description": "Functionality monitoring for Sourcegraph applications",
-  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "version": "0.0.1",
   "private": true,
   "main": "./src/index.js",
   "scripts": {
     "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn start",
-    "lint": "eslint --cache 'src/*.[jt]s?(x)'",
-    "format": "prettier --check ."
+    "eslint": "eslint --cache 'src/*.[jt]s?(x)'",
+    "prettier-check": "prettier --check .",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "jest": "^27.5.1",
