@@ -1,0 +1,9 @@
+{
+  "name": "web-performance",
+  "description": "Performance monitoring for Sourcegraph applications",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@lhci/cli": "^0.8.2"
+  }
+}

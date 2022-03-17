@@ -1,0 +1,10 @@
+{
+  "name": "web-functionality",
+  "description": "Functionality monitoring for Sourcegraph applications",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "codeceptjs": "^3.2.2",
+    "puppeteer": "^13.0.1"
+  }
+}

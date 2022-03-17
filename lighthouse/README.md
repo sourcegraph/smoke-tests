@@ -1,3 +1,0 @@
-# lighthouse [DRAFT]
-
-UX testing

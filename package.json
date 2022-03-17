@@ -1,0 +1,19 @@
+{
+  "name": "smoke-tests",
+  "version": "1.0.0",
+  "description": "Smoke tests against Sourcegraph applications",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sourcegraph/smoke-tests.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sourcegraph/smoke-tests/issues"
+  },
+  "homepage": "https://github.com/sourcegraph/smoke-tests#readme"
+}
