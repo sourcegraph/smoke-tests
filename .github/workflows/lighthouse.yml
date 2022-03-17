@@ -2,8 +2,8 @@ name: Lighthouse production audit
 on:
   workflow_dispatch:
   schedule:
-    # Hourly on the hour
-    - cron: "0 * * * *"
+    # Every 4 hours
+    - cron: "0 */4 * * *"
 
 jobs:
   update:
