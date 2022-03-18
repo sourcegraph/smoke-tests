@@ -3,17 +3,22 @@
   "description": "Functionality monitoring for Sourcegraph applications",
   "license": "Apache-2.0",
   "version": "0.0.1",
-  "main": "./src/index.js",
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/index.js",
   "bin": {
-    "start": "./src/index.js"
+    "start": "./lib/index.js"
   },
   "scripts": {
     "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn jest",
     "eslint": "eslint --cache 'src/*.[jt]s?(x)'",
     "prettier-check": "prettier --check .",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "build": "tsc"
   },
   "dependencies": {
+    "@sourcegraph/tsconfig": "^4.0.1",
     "jest": "^27.5.1",
     "jest-puppeteer": "^6.1.0",
     "puppeteer": "^13.0.1"
