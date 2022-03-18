@@ -4,6 +4,9 @@
   "license": "Apache-2.0",
   "version": "0.0.1",
   "main": "./src/index.js",
+  "bin": {
+    "start": "./src/index.js"
+  },
   "scripts": {
     "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn start",
     "eslint": "eslint --cache 'src/*.[jt]s?(x)'",
