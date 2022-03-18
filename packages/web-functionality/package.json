@@ -3,12 +3,9 @@
   "description": "Functionality monitoring for Sourcegraph applications",
   "license": "Apache-2.0",
   "version": "0.0.1",
-  "files": [
-    "lib/src"
-  ],
-  "main": "./index.js",
+  "main": "./lib/src/index.js",
   "bin": {
-    "start": "./index.js"
+    "start": "./lib/src/index.js"
   },
   "scripts": {
     "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn jest",
@@ -19,7 +16,7 @@
   },
   "dependencies": {
     "@sourcegraph/tsconfig": "^4.0.1",
-    "jest": "^27.5.1",
+    "jest": "25.5.4",
     "jest-puppeteer": "^6.1.0",
     "puppeteer": "^13.0.1"
   },

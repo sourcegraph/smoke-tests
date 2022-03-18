@@ -20,6 +20,5 @@
     "rootDir": ".",
   },
 
-  "include": ["./src"],
-  "exclude": ["out", "node_modules"],
+  "exclude": ["lib", "node_modules"],
 }
