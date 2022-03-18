@@ -8,7 +8,7 @@
     "start": "./src/index.js"
   },
   "scripts": {
-    "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn start",
+    "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn jest",
     "eslint": "eslint --cache 'src/*.[jt]s?(x)'",
     "prettier-check": "prettier --check .",
     "semantic-release": "semantic-release"
