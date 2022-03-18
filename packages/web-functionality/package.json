@@ -4,11 +4,11 @@
   "license": "Apache-2.0",
   "version": "0.0.1",
   "files": [
-    "lib"
+    "lib/src"
   ],
-  "main": "./lib/index.js",
+  "main": "./index.js",
   "bin": {
-    "start": "./lib/index.js"
+    "start": "./index.js"
   },
   "scripts": {
     "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn jest",
