@@ -1,7 +1,7 @@
 const { SOURCEGRAPH_URL } = process.env
 
 if (!SOURCEGRAPH_URL) {
-  throw new Error('SOURCEGRAPH_URL was not set. Please provide a valid URL to run the smoke tests against')
+  throw new Error('SOURCEGRAPH_URL was not set. Please provide a valid URL to run the smoke tests against.')
 }
 
 describe('Smoke tests', () => {
