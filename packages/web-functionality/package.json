@@ -3,7 +3,6 @@
   "description": "Functionality monitoring for Sourcegraph applications",
   "license": "Apache-2.0",
   "version": "0.0.1",
-  "private": true,
   "main": "./src/index.js",
   "scripts": {
     "test": "SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false yarn start",
