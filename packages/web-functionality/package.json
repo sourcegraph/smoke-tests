@@ -17,6 +17,7 @@
   "dependencies": {
     "@sourcegraph/tsconfig": "^4.0.1",
     "jest": "25.5.4",
+    "jest-cli": "25.5.4",
     "jest-puppeteer": "^6.1.0",
     "puppeteer": "^13.0.1"
   },
