@@ -2,4 +2,4 @@
 
 import { run } from 'jest-cli'
 
-run()
+run([], __dirname)
