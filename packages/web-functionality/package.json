@@ -26,5 +26,8 @@
       "main",
       "tr/add-smoke-tests"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
