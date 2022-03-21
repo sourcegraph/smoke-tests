@@ -1,12 +1,6 @@
-const { SOURCEGRAPH_URL } = process.env
-
-if (!SOURCEGRAPH_URL) {
-    throw new Error('SOURCEGRAPH_URL was not set. Please provide a valid URL to run the smoke tests against.')
-}
-
 describe('Smoke tests', () => {
     beforeEach(async () => {
-        await page.goto(SOURCEGRAPH_URL)
+        await page.goto(process.env.SOURCEGRAPH_URL)
     })
 
     it('successfully loads the application', async () => {
