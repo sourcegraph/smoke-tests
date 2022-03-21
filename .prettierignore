@@ -1,0 +1,7 @@
+**/fixtures/**/*
+**/dist
+**/coverage
+**/.vscode
+**/.vs
+**/packages/web-performance/reports
+**/packages/web-performance/.lighthouseci

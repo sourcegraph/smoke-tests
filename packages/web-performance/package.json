@@ -1,8 +1,8 @@
 {
-  "name": "web-performance",
+  "name": "@sourcegraph/web-smoke-performance",
   "description": "Performance monitoring for Sourcegraph applications",
+  "license": "Apache-2.0",
   "version": "1.0.0",
-  "private": true,
   "dependencies": {
     "@lhci/cli": "^0.8.2"
   }
