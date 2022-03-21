@@ -25,7 +25,7 @@ const handler = async () => {
         await start()
     } catch (e) {
         console.error(e)
-        process.exit(e?.exitCode || 1)
+        process.exit(e.exitCode || 1)
     }
 }
 
