@@ -1,6 +1,7 @@
 {
     "editor.formatOnSave": true,
-    "eslint.validate": ["javascript"],
+    "typescript.format.semicolons": "remove",
+    "eslint.validate": ["javascript", "typescript"],
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
     },

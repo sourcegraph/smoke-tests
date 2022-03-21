@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "yarn build && SOURCEGRAPH_URL=https://sourcegraph.com HEADLESS=false ./lib/src/index.js",
-    "eslint": "eslint --cache 'src/*.[jt]s?(x)'",
+    "eslint": "eslint '**/*.[tj]s'",
     "prettier-check": "prettier --check .",
     "semantic-release": "semantic-release",
     "build": "tsc"
