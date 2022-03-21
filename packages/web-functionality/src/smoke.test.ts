@@ -1,6 +1,6 @@
 describe('Smoke tests', () => {
     beforeEach(async () => {
-        await page.goto(process.env.SOURCEGRAPH_URL)
+        await page.goto(process.env.SOURCEGRAPH_URL || '')
     })
 
     it('successfully loads the application', async () => {

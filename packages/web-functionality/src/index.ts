@@ -1,4 +1,4 @@
-import { execa } from 'execa'
+import execa from 'execa'
 
 const { SOURCEGRAPH_URL } = process.env
 
@@ -13,7 +13,7 @@ const handler = async () => {
      * https://github.com/facebook/jest/issues/5048
      */
     const start = async () => {
-        await execa('yarn jest', null, {
+        await execa('yarn jest', ['--runInBand'], {
             cwd: __dirname,
             shell: true,
             stdio: 'inherit',
@@ -28,3 +28,5 @@ const handler = async () => {
         process.exit(e?.exitCode || 1)
     }
 }
+
+handler()
