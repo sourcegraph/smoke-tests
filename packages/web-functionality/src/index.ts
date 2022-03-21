@@ -14,7 +14,7 @@ const handler = async () => {
      * https://github.com/facebook/jest/issues/5048
      */
     const start = async () => {
-        await execa('yarn jest', ['--runInBand'], {
+        await execa('jest', ['--runInBand'], {
             cwd: __dirname,
             shell: true,
             stdio: 'inherit',
