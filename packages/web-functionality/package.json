@@ -31,8 +31,7 @@
   },
   "release": {
     "branches": [
-      "main",
-      "tr/add-smoke-tests"
+      "main"
     ]
   },
   "publishConfig": {
