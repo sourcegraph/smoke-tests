@@ -3,7 +3,6 @@
   "description": "Functionality monitoring for Sourcegraph applications",
   "license": "Apache-2.0",
   "version": "0.0.1",
-  "main": "./lib/src/index.js",
   "bin": {
     "start": "./lib/src/index.js"
   },
@@ -18,7 +17,6 @@
     "@sourcegraph/tsconfig": "^4.0.1",
     "execa": "^5.1.1",
     "jest": "25.5.4",
-    "jest-cli": "25.5.4",
     "jest-junit": "^13.0.0",
     "jest-puppeteer": "^6.1.0",
     "puppeteer": "^13.0.1"
