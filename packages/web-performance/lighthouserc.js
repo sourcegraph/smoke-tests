@@ -3,9 +3,9 @@ const config = {
     collect: {
       url: [
         'https://sourcegraph.com',
-        'https://sourcegraph.com/search?q=repo:sourcegraph/lighthouse-ci-test-repository+file:index.js',
-        'https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository',
-        'https://sourcegraph.com/github.com/sourcegraph/lighthouse-ci-test-repository/-/blob/index.js',
+        'https://sourcegraph.com/search?q=repo:sourcegraph/smoke-tests-test-repository+file:index.js',
+        'https://sourcegraph.com/github.com/sourcegraph/smoke-tests-test-repository',
+        'https://sourcegraph.com/github.com/sourcegraph/smoke-tests-test-repository/-/blob/index.js',
       ],
       settings: {
         preset: 'desktop',

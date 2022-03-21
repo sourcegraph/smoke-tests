@@ -7,4 +7,5 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   modulePathIgnorePatterns: ['<rootDir>/node_modules/'],
+  testResultsProcessor: 'jest-junit',
 }

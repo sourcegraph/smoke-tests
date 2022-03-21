@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import execa from 'execa'
 
-const { SOURCEGRAPH_URL } = process.env
+const { SOURCEGRAPH_URL, JEST_JUNIT_OUTPUT_NAME, JEST_JUNIT_OUTPUT_DIR } = process.env
 
 if (!SOURCEGRAPH_URL) {
     throw new Error('SOURCEGRAPH_URL was not set. Please provide a valid URL to run the smoke tests against.')
@@ -18,7 +18,7 @@ const handler = async (): Promise<void> => {
             cwd: __dirname,
             shell: true,
             stdio: 'inherit',
-            env: { SOURCEGRAPH_URL },
+            env: { SOURCEGRAPH_URL, JEST_JUNIT_OUTPUT_NAME, JEST_JUNIT_OUTPUT_DIR },
         })
     } catch (error) {
         console.error(error)

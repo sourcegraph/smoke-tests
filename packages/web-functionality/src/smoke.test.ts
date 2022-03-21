@@ -9,7 +9,7 @@ describe('Smoke tests', () => {
 
     it('successful runs a search', async () => {
         // Update search input
-        await expect(page).toFill('.inputarea', 'repo:^github.com/sourcegraph/lighthouse-ci-test-repository$')
+        await expect(page).toFill('.inputarea', 'repo:^github.com/sourcegraph/smoke-tests-test-repository$')
 
         // Click search button
         await expect(page).toClick('.test-search-button')
