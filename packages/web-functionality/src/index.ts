@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import execa from 'execa'
 
 const { SOURCEGRAPH_URL } = process.env
