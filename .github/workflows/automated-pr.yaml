@@ -23,7 +23,7 @@ jobs:
           pr_body: '*An automated PR*'
       - name: some-tests
         run: |
-          exit 1
+          echo "Test should run here"
       - uses: hmarr/auto-approve-action@v2
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
