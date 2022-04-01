@@ -9,6 +9,7 @@ describe('Smoke tests', () => {
 
     it('successful runs a search', async () => {
         // Update search input
+        await page.waitForSelector('.test-query-input textarea')
         await expect(page).toFill(
             '.test-query-input textarea',
             'repo:^github.com/sourcegraph/smoke-tests-test-repository$'
@@ -18,6 +19,9 @@ describe('Smoke tests', () => {
         await expect(page).toClick('.test-search-button')
 
         // Expect results count is shown correctly
-        await expect(page).toMatchElement('[data-testid="streaming-progress-count"]', { text: '1 result' })
-    }, 5000) // Bigger timeout is required to avoid flakes. Default is 500ms.
+        await page.waitForSelector('[data-testid="streaming-progress-count"]')
+        await expect(page).toMatchElement('[data-testid="streaming-progress-count"]', {
+            text: '1 result',
+        })
+    })
 })
