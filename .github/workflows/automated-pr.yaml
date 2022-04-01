@@ -11,6 +11,8 @@ jobs:
       - name: rebase main
         run: |
           git remote -v
+          git checkout main
+          git checkout ${{ github.ref.name }}
           git rebase origin/main
       - name: pull-request
         uses: repo-sync/pull-request@v2
