@@ -12,7 +12,6 @@ jobs:
         run: |
           git remote -v
           git fetch
-          git checkout main
           git checkout ${{ github.ref.name }}
           git rebase origin/main
       - name: pull-request
