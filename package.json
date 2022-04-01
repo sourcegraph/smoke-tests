@@ -12,7 +12,7 @@
     "@sourcegraph/eslint-config": "^0.27.0",
     "@sourcegraph/prettierrc": "^3.0.3",
     "eslint": "^7.32.0",
-    "husky": "^4.3.5",
+    "husky": "^7.0.4",
     "prettier": "^2.6.0",
     "semantic-release": "^17.1.2"
   },
