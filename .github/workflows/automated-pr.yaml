@@ -13,7 +13,7 @@ jobs:
           git remote -v
           git fetch
           git checkout ${{ github.ref.name }}
-          git rebase origin/main ${{ github.ref }}
+          git rebase main
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
