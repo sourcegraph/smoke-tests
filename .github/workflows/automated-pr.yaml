@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: rebase main
-        run: |
-          git remote -v
-          git fetch
-          git checkout ${{ github.ref.name }}
-          git rebase origin/main
+      # - name: rebase main
+      #   run: |
+      #     git remote -v
+      #     git fetch
+      #     git checkout ${{ github.ref.name }}
+      #     git rebase origin/main
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
