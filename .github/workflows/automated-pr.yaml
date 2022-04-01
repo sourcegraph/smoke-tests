@@ -10,7 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: rebase main
         run: |
-          git rebase refs/heads/main ${{ github.ref }}
+          git remote -v
+          git rebase origin/main
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
