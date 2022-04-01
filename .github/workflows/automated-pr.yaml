@@ -9,8 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: rebase main
-        run: |
-          git remote
+        uses: cirrus-actions/rebase@1.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
