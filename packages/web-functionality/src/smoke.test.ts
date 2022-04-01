@@ -19,5 +19,5 @@ describe('Smoke tests', () => {
 
         // Expect results count is shown correctly
         await expect(page).toMatchElement('[data-testid="streaming-progress-count"]', { text: '1 result' })
-    })
+    }, 5000) // Bigger timeout is required to avoid flakes. Default is 500ms.
 })

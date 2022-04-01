@@ -26,7 +26,7 @@ const handler = async (): Promise<void> => {
             await runTests()
             break
         } catch (error) {
-            console.error(error)
+            console.error(`Failed attempt ${index}:`, error)
             if (index === 2) {
                 process.exit(error?.exitCode || 1)
             }
