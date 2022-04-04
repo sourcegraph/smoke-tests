@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - filip/*
+
+jobs:
+  pull-request:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: 'main'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: 'Pulling ${{ github.ref }} into main'
+          pr_body: '*An automated PR*'
+      - name: some-tests
+        run: |
+          echo "Test should run here"
