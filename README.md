@@ -13,7 +13,3 @@ See the [README](./packages/web-functionality/README.md) for more information.
 Series of Lighthouse audits that measure web performance on Sourcegraph.com
 
 See the [README](./packages/web-performance/README.md) for more information.
-
-
-### TODO
-- create Docker image
