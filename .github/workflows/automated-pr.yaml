@@ -20,6 +20,3 @@ jobs:
       - name: some-tests
         run: |
           echo "Test should run here"
-      - name: approve-pr
-        run: |
-          gh pr review --approve
