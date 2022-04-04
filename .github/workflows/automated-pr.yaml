@@ -19,6 +19,5 @@ jobs:
         run: |
           echo "Test should run here"
       - name: approve-pr
-        if: ${{ github.base_ref == 'main' }}
         run: |
           gh pr review --approve
