@@ -6,6 +6,8 @@ on:
 jobs:
   pull-request:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - uses: actions/checkout@v2
       - name: pull-request
