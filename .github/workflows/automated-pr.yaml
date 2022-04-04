@@ -8,12 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      # - name: rebase main
-      #   run: |
-      #     git remote -v
-      #     git fetch
-      #     git checkout ${{ github.ref.name }}
-      #     git rebase origin/main
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
@@ -24,6 +18,7 @@ jobs:
       - name: some-tests
         run: |
           echo "Test should run here"
-      - uses: hmarr/auto-approve-action@v2
-        with:
-          github-token: '${{ secrets.GITHUB_TOKEN }}'
+      - name: approve-pr
+        if: ${{ github.base_ref == 'main' }}
+        run: |
+          gh pr review --approve
