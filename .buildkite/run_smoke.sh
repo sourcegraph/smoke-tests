@@ -1,4 +1,5 @@
 #!/bin/bash
+
 instances=$(echo $INSTANCES | tr "," "\n")
 echo "--- :list: Instances list $instances"
 
