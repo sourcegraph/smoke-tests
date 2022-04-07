@@ -1,5 +1,6 @@
 #!/bin/bash
 instances=$(echo $INSTANCES | tr "," "\n")
+echo "--- :list: Instances list $instances"
 
 for instance in $instances; do
     echo "--- :fire: Running smoke tests against https://$instance"

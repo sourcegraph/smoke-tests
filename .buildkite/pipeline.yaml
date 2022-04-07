@@ -6,5 +6,5 @@ steps:
     commands:
       - .buildkite/run_smoke.sh
     env:
-      BASE_URL: "https://sourcegraph.com"
+      INSTANCES: $INSTANCES
     agents: { queue: "standard" }
