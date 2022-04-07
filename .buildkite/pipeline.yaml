@@ -4,7 +4,7 @@ steps:
     concurrency: 1
     concurrency_group: dot-com/deploy
     commands:
-      - ./run-smoke.sh
+      - ./run_smoke.sh
     env:
       BASE_URL: "https://sourcegraph.com"
     agents: { queue: "standard" }
