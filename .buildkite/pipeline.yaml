@@ -1,0 +1,10 @@
+steps:
+  - label: 'Cloud smoke tests'
+    branches: 'filip/smoke_cloud'
+    concurrency: 1
+    concurrency_group: dot-com/deploy
+    commands:
+      - ./run-smoke.sh
+    env:
+      BASE_URL: "https://sourcegraph.com"
+    agents: { queue: "standard" }
