@@ -7,7 +7,7 @@
     "start": "./lib/src/index.js"
   },
   "scripts": {
-    "test": "yarn build && SOURCEGRAPH_URL=https://sourcegraph.com node ./lib/src/index.js",
+    "test": "yarn build && SOURCEGRAPH_URL=https://sourcegraph.com/search node ./lib/src/index.js",
     "eslint": "eslint '**/*.[tj]s'",
     "prettier-check": "prettier --check .",
     "semantic-release": "semantic-release",
