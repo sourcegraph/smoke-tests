@@ -17,7 +17,7 @@
     "@sourcegraph/tsconfig": "^4.0.1",
     "execa": "^5.1.1",
     "jest": "25.5.4",
-    "jest-junit": "^13.0.0",
+    "jest-junit": "^14.0.1",
     "jest-puppeteer": "^6.1.0",
     "puppeteer": "^13.0.1"
   },
