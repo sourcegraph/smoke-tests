@@ -1284,13 +1284,13 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/expect-puppeteer@5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@types/expect-puppeteer/-/expect-puppeteer-5.0.1.tgz#25230c09d89f6db4c8c17c36a0b91dfa4e7bdf84"
-  integrity sha512-pHyrvgY0Ovjem3mFbgZWHHI5HJ+LF3Pc3j3sX3+15OMgZcpnCCohoq2EY1WI2VtQcTgEluFvdXhh+6IY1lHqCQ==
+"@types/expect-puppeteer@5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@types/expect-puppeteer/-/expect-puppeteer-5.0.2.tgz#f8df6ef1eb830f99c000c8e5b8081d1a99c7e5bd"
+  integrity sha512-ThJBoF0malG3Pfq5RxYALAPfZuG7svRn26LwijWpd/HDykR8tBl4KlzhfnmdaLmxiMeMBQQDQHy/loPQsjenMg==
   dependencies:
     "@types/jest" "*"
-    "@types/puppeteer" "*"
+    "@types/puppeteer" "^5.4.0"
 
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
@@ -1378,7 +1378,7 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-1.19.1.tgz#33509849f8e679e4add158959fdb086440e9553f"
   integrity sha512-5qOlnZscTn4xxM5MeGXAMOsIOIKIbh9e85zJWfBRVPlRMEVawzoPhINYbRGkBZCI8LxvBe7tJCdWiarA99OZfQ==
 
-"@types/puppeteer@*", "@types/puppeteer@5.4.7":
+"@types/puppeteer@*", "@types/puppeteer@5.4.7", "@types/puppeteer@^5.4.0":
   version "5.4.7"
   resolved "https://registry.yarnpkg.com/@types/puppeteer/-/puppeteer-5.4.7.tgz#b8804737c62c6e236de0c03fa74f91c174bf96b6"
   integrity sha512-JdGWZZYL0vKapXF4oQTC5hLVNfOgdPrqeZ1BiQnGk5cB7HeE91EWUiTdVSdQPobRN8rIcdffjiOgCYJ/S8QrnQ==
