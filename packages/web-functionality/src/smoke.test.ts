@@ -1,27 +1,22 @@
-describe('Smoke tests', () => {
-    beforeEach(async () => {
-        await page.goto(process.env.SOURCEGRAPH_URL || '')
-    })
+const searchUrl = process.env.SOURCEGRAPH_URL || ''
+const resultCountSelector = '[data-testid="streaming-progress-skipped"]'
+const searchQuery = 'repo:^github.com/sourcegraph/smoke-tests-test-repository$'
+const expectedResultString = '1 result'
 
+describe('Smoke tests', () => {
     it('successfully loads the application', async () => {
+        await page.goto(searchUrl)
         await expect(page).toMatch('Sourcegraph')
     })
 
     it('successful runs a search', async () => {
-        // Update search input
-        await page.waitForSelector('.test-query-input textarea')
-        await expect(page).toFill(
-            '.test-query-input textarea',
-            'repo:^github.com/sourcegraph/smoke-tests-test-repository$'
-        )
-
-        // Click search button
-        await expect(page).toClick('.test-search-button')
+        // Perform a search by navigating to a search results page with the q parameter
+        await page.goto(searchUrl + `?q=${encodeURIComponent(searchQuery)}`)
 
         // Expect results count is shown correctly
-        await page.waitForSelector('[data-testid="streaming-progress-count"]')
-        await expect(page).toMatchElement('[data-testid="streaming-progress-count"]', {
-            text: '1 result',
+        await page.waitForSelector(resultCountSelector)
+        await expect(page).toMatchElement(resultCountSelector, {
+            text: expectedResultString,
         })
     })
 })
