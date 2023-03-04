@@ -1284,10 +1284,10 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
-"@types/expect-puppeteer@5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@types/expect-puppeteer/-/expect-puppeteer-5.0.2.tgz#f8df6ef1eb830f99c000c8e5b8081d1a99c7e5bd"
-  integrity sha512-ThJBoF0malG3Pfq5RxYALAPfZuG7svRn26LwijWpd/HDykR8tBl4KlzhfnmdaLmxiMeMBQQDQHy/loPQsjenMg==
+"@types/expect-puppeteer@5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@types/expect-puppeteer/-/expect-puppeteer-5.0.3.tgz#dec156fedaf9f00b81ee09feabc91d51d8c5c22f"
+  integrity sha512-NIqATm95VmFbc2s9v1L3yj9ZS9/rCrtptSgBsvW8mcw2KFpLFQqXPyEbo0Vju1eiBieI38jRGWgpbVuUKfQVoQ==
   dependencies:
     "@types/jest" "*"
     "@types/puppeteer" "^5.4.0"

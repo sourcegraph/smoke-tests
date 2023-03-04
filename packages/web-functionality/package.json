@@ -22,7 +22,7 @@
     "puppeteer": "^13.0.1"
   },
   "devDependencies": {
-    "@types/expect-puppeteer": "5.0.2",
+    "@types/expect-puppeteer": "5.0.3",
     "@types/jest": "25.2.3",
     "@types/jest-environment-puppeteer": "5.0.3",
     "@types/puppeteer": "5.4.7"
