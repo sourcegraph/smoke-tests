@@ -13,7 +13,7 @@ jobs:
   build-web-functionality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # set up correct version of node
       - id: nvmrc
