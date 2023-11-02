@@ -1326,10 +1326,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest-environment-puppeteer@5.0.4":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@types/jest-environment-puppeteer/-/jest-environment-puppeteer-5.0.4.tgz#8b8dce57f4078ce98e694e001db9d2c716af236b"
-  integrity sha512-vYzB8lUHAP+20ML4811HtXbU6+aQ54V3525vex9LE+KO/mBR1psHMeJFCmnlhM873D23jsLz4YJjHERDzjuCJw==
+"@types/jest-environment-puppeteer@5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@types/jest-environment-puppeteer/-/jest-environment-puppeteer-5.0.5.tgz#63e31b3e381f36292355c6e5d248276e32868bc9"
+  integrity sha512-XRl2Qnw4bp2Wq119FVsMj0CDA4Nf+B4HmiImQH3sJCGea5WyDrj6mjzXUGz8GMmm9fwN4ZY2uJI1yFYzHrPfKQ==
   dependencies:
     "@jest/types" ">=24 <=27"
     "@types/puppeteer" "^5.4.0"
