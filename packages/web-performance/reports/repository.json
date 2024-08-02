@@ -1,7 +1,7 @@
 {
-  "performance": "0.95
-0.92
-0.91",
+  "performance": "0.94
+0.95
+0.9",
   "accessibility": "0.86
 0.86
 0.86",
@@ -12,7 +12,7 @@
 0.73
 0.73",
   "report_name": ":repository: *Repository page*",
-  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722557666655-87695.report.html
-https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722557667387-8571.report.html
-https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722557667829-47570.report.html"
+  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571535429-76964.report.html
+https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571535855-71362.report.html
+https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571536128-6294.report.html"
 }
