@@ -1,18 +1,8 @@
 {
-  "performance": "0.91
-0.93
-0.92",
-  "accessibility": "0.86
-0.86
-0.86",
-  "best-practices": "0.87
-0.87
-0.87",
-  "seo": "0.73
-0.73
-0.73",
+  "performance": "0.73",
+  "accessibility": "0.72",
+  "best-practices": "0.87",
+  "seo": "1",
   "report_name": ":house: *Homepage*",
-  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571461381-89606.report.html
-https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571461608-43644.report.html
-https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571462074-55535.report.html"
+  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722585897375-45092.report.html"
 }

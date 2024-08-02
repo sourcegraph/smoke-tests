@@ -1,18 +1,8 @@
 {
-  "performance": "0.94
-0.9
-0.9",
-  "accessibility": "0.86
-0.86
-0.86",
-  "best-practices": "0.87
-0.87
-0.87",
-  "seo": "0.73
-0.73
-0.73",
+  "performance": "0.7",
+  "accessibility": "0.65",
+  "best-practices": "0.87",
+  "seo": "0.9",
   "report_name": ":code: *File blob*",
-  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571572060-68138.report.html
-https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571572253-55919.report.html
-https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722571572579-15014.report.html"
+  "report_url": "https://storage.googleapis.com/lighthouse-infrastructure.appspot.com/reports/1722586017893-38170.report.html"
 }
