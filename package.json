@@ -7,8 +7,8 @@
     "packages/*"
   ],
   "dependencies": {
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
     "@sourcegraph/eslint-config": "^0.27.0",
     "@sourcegraph/prettierrc": "^3.0.3",
     "eslint": "^7.32.0",
