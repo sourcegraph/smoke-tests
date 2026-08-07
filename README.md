@@ -2,6 +2,8 @@
 
 This repository contains a series of smoke tests that can be ran against Sourcegraph instances.
 
+These automated tests help ensure Sourcegraph deployments are working correctly.
+
 ### Web functionality
 
 Series of checks that assess if a Sourcegraph instance is functioning properly.
