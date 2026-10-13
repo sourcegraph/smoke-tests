@@ -4,6 +4,6 @@
   "license": "Apache-2.0",
   "version": "1.0.0",
   "dependencies": {
-    "@lhci/cli": "^0.8.2"
+    "@lhci/cli": "^0.15.1"
   }
 }
